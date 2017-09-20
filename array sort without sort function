@@ -1,0 +1,20 @@
+<?php 
+$array = array('1','2','4','3','8','7','10','11');
+
+$c = count($array);
+for($i=0;$i<$c;$i++)
+{
+    if($array[$i] > $array[$i+1]) {
+            $temp = $array[$i+1];
+            $array[$i+1]=$array[$i];
+            $array[$i]=$temp;
+        }  
+}
+
+echo "Sorted Array is: ";
+echo "<br /><pre>";
+print_r($array);
+
+
+
+?>
