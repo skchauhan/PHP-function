@@ -6,10 +6,11 @@ php 7
 1)
 type hinting ( string , int, bool  )
 
-declare(strict_types = 1); ye strict mode hai jo string to int main automatiacley convert honey say rokta hai
+declare(strict_types = 1); 
+
+
 2)
-return type declaration
-ab ye function array value he return karega
+
 function test() : array {
 return array();
 }
