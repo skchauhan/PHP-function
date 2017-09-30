@@ -3,8 +3,8 @@
 
 php 7
 
+1)
 type hinting ( string , int, bool  )
-
 
 declare(strict_types = 1); ye strict mode hai jo string to int main automatiacley convert honey say rokta hai
 2)
