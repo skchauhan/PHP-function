@@ -1,0 +1,8 @@
+	$newArray = [];
+foreach ($arr['pay_type'] as  $strKey => $strValue) {
+	// echo $strKey;
+	foreach ($arr as $key => $value) {
+		// print_r($value);
+		$newArray[$strKey][$key] = $value[$strKey];
+	}
+}
