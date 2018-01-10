@@ -46,3 +46,14 @@ if a is grater than b return 1
 if a is less than b return -1
 if a is equal b return 0
 
+
+
+6)
+Php error log in txt file
+
+ini_set("log_errors", 1);
+ini_set("error_log", "php-error.log");
+echo $adfdsf;
+
+
+
