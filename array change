@@ -6,3 +6,16 @@ foreach ($arr['pay_type'] as  $strKey => $strValue) {
 		$newArray[$strKey][$key] = $value[$strKey];
 	}
 }
+
+
+
+$arr = [['name'=>'sunil', 'address'=>'delhi'], ['name'=>'amit', 'address'=>'goa'], ['name'=>'anil', 'address'=>'goa']];
+  print"<pre>";
+  $newArr = [];
+  foreach ($arr as $key => $strValue) {
+    foreach ($strValue as $qkey => $qvalue) {
+      $newArr[$qkey][] = $strValue[$qkey];
+    }
+  }  
+
+  print_r($newArr);
