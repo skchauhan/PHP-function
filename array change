@@ -19,3 +19,25 @@ $arr = [['name'=>'sunil', 'address'=>'delhi'], ['name'=>'amit', 'address'=>'goa'
   }  
 
   print_r($newArr);
+  
+  
+  ========================================================
+  
+  
+  
+  
+$arr = ['name'=>['lorem','ipsum','dummy'], 'address'=>['delhi','sdafasdf','sdfasdf']];
+
+
+  // pre($arr);
+
+  $nearr = [];
+foreach ($arr as $key => $value) {
+  foreach ($value as $asad=>$dadfd) {
+     $nearr[$asad][] =  $dadfd;
+  }
+}
+pre($nearr);
+
+
+
