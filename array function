@@ -1,0 +1,35 @@
+Remove Duplicate value from array
+i)
+<?php
+print"<pre>";
+$inputArray = array(1, 4, 2, 1, 6, 4, 9, 7, 2, 9);
+$outputArray = array();
+
+foreach ($inputArray as $val){
+ if(!in_array($val,$outputArray)){
+  $outputArray[] = $val;
+ }
+}
+print_r($outputArray);
+-------------------------------------
+ii)
+$array = array (1,4,2,1,6,4,9,7,2,9);
+$array = array_keys(array_flip($array));
+var_dump($array); # array(1,4,2,6,9,7)
+
+
+=======================================================================================
+Explode string without function
+
+1)
+$str="this is string"; 
+$newA = [];
+for ($i=0; $i < strlen($str); $i++) { 
+	$newA[] = substr($str, $i, 1);
+}
+print_r($newA);
+
+2)
+$keywords = preg_split("/ /", "this is string");
+print_r($keywords);
+
