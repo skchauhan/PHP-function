@@ -33,3 +33,17 @@ print_r($newA);
 $keywords = preg_split("/ /", "this is string");
 print_r($keywords);
 
+
+======================================================================================
+
+Count Duplicate value without array_count_value function
+
+$arr = ['lorem', 'ipsum', 'lorem', 'asdfasdf'];
+
+$new = [];
+foreach ($arr as $key => $value) {
+	isset($new[$value]) or $new[$value] = 0;
+	$new[$value]++;
+}
+
+print_r($new);
