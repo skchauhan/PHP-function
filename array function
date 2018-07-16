@@ -47,3 +47,28 @@ foreach ($arr as $key => $value) {
 }
 
 print_r($new);
+
+
+======================================================================================
+Splite array in php without useing array_chunk
+
+$pergroup = 2;
+
+$redfunc = function ($partial, $elem) use ($pergroup) {
+	print_r($elem);
+    $groupCount = count($partial);
+    // echo "$groupCount";
+    if ($groupCount == 0 || count(end($partial)) == $pergroup)
+        $partial[] = array($elem);
+    else
+        $partial[$groupCount-1][] = $elem;
+
+    return $partial;
+};
+
+$arr = array(1,2,3,4,5,987,7);
+
+print_r(array_reduce($arr, $redfunc));
+
+
+=====================================================================================
