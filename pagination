@@ -1,0 +1,23 @@
+$limit = 5;
+$prev = 1;
+if (isset($_POST["page"])) {
+	$page  = $_POST["page"];
+}
+else
+{
+	$page=1;
+};
+$prev = $page-1;
+
+if($page <= 1) {
+	$prev = 1;
+}
+
+$next = $page+1 ;
+if($page <= 1) {
+	$next = 2;
+}
+
+$start_from = ($page-1) * $limit;  
+
+$sales = find_by_sql("SELECT * FROM `products` ORDER BY id DESC LIMIT $start_from, $limit");
